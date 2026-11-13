@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jaiho Links — One Ecosystem. Every Connection.</title>
+
+    <meta name="description"
+        content="Explore the Jaiho ecosystem. Discover companies, products, platforms and digital experiences created by Jaiho Digital.">
+
+    <meta name="theme-color" content="#f8f7f3">
+
+    <meta property="og:title" content="Jaiho Links">
+    <meta property="og:description"
+        content="One ecosystem. Every connection. Explore the Jaiho ecosystem.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+
+            <a href="index.html" class="brand" aria-label="Jaiho Links home">
+                <span class="brand-mark">J</span>
+                <span class="brand-text">
+                    jaiho<span class="editorial">.links</span>
+                </span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#directory">Explore</a>
+                <a href="#about">About</a>
+
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    Contribute
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero">
+            <div class="container">
+
+                <div class="hero-label">
+                    <span class="hero-label-dot"></span>
+                    THE JAIHO ECOSYSTEM
+                </div>
+
+                <h1 class="hero-title">
+                    One ecosystem.<br>
+                    <span class="editorial">Every connection.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A home for everything Jaiho.
+                    Discover our companies, products, platforms
+                    and the ideas connecting them.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#directory" class="button button-primary">
+                        Explore the ecosystem
+                        <i data-lucide="arrow-down"></i>
+                    </a>
+
+                    <a href="#about" class="button button-secondary">
+                        Our story
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="hero-decoration" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Directory -->
+        <section class="section" id="directory">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-eyebrow">FIND YOUR WAY</span>
+
+                        <h2 class="section-title">
+                            Explore the <span class="editorial">directory.</span>
+                        </h2>
+
+                        <p class="section-description">
+                            From ideas to products, discover everything
+                            happening across the Jaiho ecosystem.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Search -->
+                <div class="search-wrapper">
+
+                    <div class="search-box">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="directory-search"
+                            placeholder="Search companies, products and more..."
+                            aria-label="Search the Jaiho directory"
+                            autocomplete="off"
+                        >
+
+                        <span class="search-shortcut" aria-hidden="true">
+                            SEARCH
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Category Filters -->
+                <div class="category-filters" aria-label="Filter directory">
+
+                    <button
+                        class="category-button active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
+                        Everything
+                    </button>
+
+                    <button
+                        class="category-button"
+                        type="button"
+                        data-filter="company"
+                        aria-pressed="false">
+                        Companies
+                    </button>
+
+                    <button
+                        class="category-button"
+                        type="button"
+                        data-filter="product"
+                        aria-pressed="false">
+                        Products
+                    </button>
+
+                </div>
+
+
+                <!-- Directory Cards -->
+                <div
+                    class="directory-grid"
+                    id="directory-grid"
+                    aria-live="polite">
+
+                    <div class="loading-state">
+                        <p>Discovering the Jaiho ecosystem...</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="section about-section" id="about">
+
+            <div class="container">
+
+                <div class="about-content">
+
+                    <span class="section-eyebrow">A LITTLE ABOUT US</span>
+
+                    <h2 class="section-title">
+                        Technology with <span class="editorial">purpose.</span>
+                    </h2>
+
+                    <p class="about-description">
+                        Jaiho Digital is an ecosystem of technology,
+                        research, innovation and creative ventures.
+                        Each company and product has its own purpose,
+                        but together they share one vision.
+                    </p>
+
+                    <p class="about-tagline editorial">
+                        Tech for Earth, Tech for All.
+                    </p>
+
+                    <a href="jlc/jaihodigital.html"
+                        class="button button-secondary">
+                        Discover Jaiho Digital
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Open Source Contribution -->
+        <section class="section contribution-section">
+
+            <div class="container">
+
+                <div class="contribution-content">
+
+                    <div class="contribution-icon">
+                        <i data-lucide="git-pull-request"></i>
+                    </div>
+
+                    <span class="section-eyebrow">
+                        BUILT TOGETHER
+                    </span>
+
+                    <h2 class="section-title">
+                        Every connection <span class="editorial">matters.</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Jaiho Links is designed to grow with the ecosystem.
+                        Help us improve it by contributing new pages,
+                        links and ideas through GitHub.
+                    </p>
+
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button button-primary">
+
+                        Contribute on GitHub
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand">
+                        <span class="brand-mark">J</span>
+
+                        <span class="brand-text">
+                            jaiho<span class="editorial">.links</span>
+                        </span>
+                    </a>
+
+                    <p class="footer-description">
+                        One ecosystem. Every connection.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="#directory">Directory</a>
+                    <a href="#about">About</a>
+
+                    <a href="jlc/jaihodigital.html">
+                        Jaiho Digital
+                    </a>
+
+                    <a href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="current-year"></span>
+                    Jaiho Digital. All rights reserved.
+                </p>
+
+                <p>
+                    Crafted by
+                    <span data-site-developer>Jaiho TechServe</span>.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Current Year -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const yearElement = document.getElementById("current-year");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>
