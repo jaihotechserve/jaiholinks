@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="Jaiho Digital — Tech for Earth. Tech for All. Explore our products, subsidiaries and social media links.">
+  <title>Jaiho Digital | Jaiho Links</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 48px 20px;
+      background: #f8f7f3;
+      color: #292824;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 35px;
+      color: #77736b;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .back-link:hover {
+      color: #292824;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .profile-logo {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      background: #292824;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 29px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .profile h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(29px, 6vw, 38px);
+      font-weight: 700;
+      letter-spacing: -.8px;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      color: #817c72;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-heading {
+      margin-bottom: 13px;
+      color: #817c72;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .link-card {
+      min-height: 57px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid #e9e6df;
+      border-radius: 13px;
+      background: #fff;
+      color: #37352f;
+      font-size: 13px;
+      font-weight: 600;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: #c9c3b8;
+      box-shadow: 0 7px 18px rgba(40, 36, 27, .05);
+    }
+
+    .icon {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .social-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .social-grid .link-card {
+      justify-content: center;
+      padding: 14px 9px;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .footer {
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid #e9e6df;
+      text-align: center;
+      color: #969086;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: #615c53;
+      font-weight: 700;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 16px;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .links-grid {
+        gap: 9px;
+      }
+
+      .link-card {
+        padding: 13px 11px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Inline SVG Icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-facebook" viewBox="0 0 24 24">
+      <path d="M14 8h3V4h-3a5 5 0 0 0-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9a1 1 0 0 1 1-1z"/>
+    </symbol>
+
+    <symbol id="icon-youtube" viewBox="0 0 24 24">
+      <path d="M22 12s0-3.5-.5-5.2a2.8 2.8 0 0 0-2-2C17.8 4.3 12 4.3 12 4.3s-5.8 0-7.5.5a2.8 2.8 0 0 0-2 2C2 8.5 2 12 2 12s0 3.5.5 5.2a2.8 2.8 0 0 0 2 2c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a2.8 2.8 0 0 0 2-2C22 15.5 22 12 22 12z"/>
+      <path d="m10 15 5-3-5-3z"/>
+    </symbol>
+
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.2-.4-4 1.5a13.7 13.7 0 0 0-7.2 0C5.7 1.1 4.5 1.5 4.5 1.5a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 3 8.7c0 5.2 3.1 6.4 6.1 6.7A3.4 3.4 0 0 0 8.2 18V22"/>
+    </symbol>
+
+    <symbol id="icon-threads" viewBox="0 0 24 24">
+      <path d="M12 21c-5.5 0-9-3.7-9-9s3.5-9 9-9c4.5 0 7.6 2.5 8.5 6.4"/>
+      <path d="M20.5 12.5c0 5.5-3.5 8.5-8 8.5"/>
+      <path d="M8 10c.5-2 2-3 4-3 3.5 0 5.5 2.5 5.5 6 0 2.5-1.5 4-4 4-2 0-3.5-1-3.5-3 0-1.5 1-2.5 3-2.5 2 0 4 1 5 2"/>
+    </symbol>
+
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
+    </symbol>
+
+    <symbol id="icon-box" viewBox="0 0 24 24">
+      <path d="m12 2 9 5v10l-9 5-9-5V7z"/>
+      <path d="m3 7 9 5 9-5M12 12v10"/>
+    </symbol>
+
+    <symbol id="icon-building" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="16" height="18" rx="2"/>
+      <path d="M9 7h2m2 0h2M9 11h2m2 0h2M9 15h2m2 0h2M10 21v-3h4v3"/>
+    </symbol>
+
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M14 3h7v7"/>
+      <path d="M10 14 21 3"/>
+      <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/>
+    </symbol>
+
+  </svg>
+
+  <main class="container">
+
+    <a href="../index.html" class="back-link">
+      ← Back to Jaiho Links
+    </a>
+
+    <!-- Profile -->
+    <header class="profile">
+      <div class="profile-logo">JD</div>
+      <h1>Jaiho Digital</h1>
+      <p class="tagline">Tech for Earth. Tech for All.</p>
+    </header>
+
+    <!-- Social Media -->
+    <section class="section">
+      <h2 class="section-heading">Connect With Us</h2>
+
+      <div class="links-grid social-grid">
+
+        <a class="link-card" href="https://www.instagram.com/jaihodigital" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-instagram"/></svg>
+          Instagram
+        </a>
+
+        <a class="link-card" href="https://www.facebook.com/people/Jaiho-Digital/61577036115802/" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-facebook"/></svg>
+          Facebook
+        </a>
+
+        <a class="link-card" href="https://huggingface.co/jaihodigital" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-box"/></svg>
+          Hugging Face
+        </a>
+
+        <a class="link-card" href="https://www.youtube.com/@jaihodigital" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-youtube"/></svg>
+          YouTube
+        </a>
+
+        <a class="link-card" href="https://github.com/Jaiho-Digital" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-github"/></svg>
+          GitHub
+        </a>
+
+        <a class="link-card" href="https://www.threads.com/@jaihodigital" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-threads"/></svg>
+          Threads
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section">
+      <h2 class="section-heading">Our Products & Platforms</h2>
+
+      <div class="links-grid">
+
+        <a class="link-card" href="https://supersimpleoffice.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-box"/></svg>
+          Jaiho SuperSimple Office
+        </a>
+
+        <a class="link-card" href="https://itsarc.w3spaces.com/itsarc2.html?fname=&lname=" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-globe"/></svg>
+          ITSARC EdTech
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Subsidiaries -->
+    <section class="section">
+      <h2 class="section-heading">Our Subsidiaries</h2>
+
+      <div class="links-grid">
+
+        <a class="link-card" href="https://jaiho-labs.onrender.com" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-building"/></svg>
+          Jaiho Labs
+        </a>
+
+        <a class="link-card" href="https://jaihokernel.onrender.com" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-building"/></svg>
+          Jaiho Kernel
+        </a>
+
+        <a class="link-card" href="https://jaihotechserve.onrender.com" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-building"/></svg>
+          Jaiho TechServe
+        </a>
+
+        <a class="link-card" href="https://jaihoaimedia.vercel.app" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-building"/></svg>
+          Jaiho AI Media
+        </a>
+
+        <a class="link-card" href="https://jaihoedge.onrender.com" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-building"/></svg>
+          Jaiho Edge
+        </a>
+
+        <a class="link-card" href="https://jaiho-digital.onrender.com/org_sub_pages/jaiho_reach.html" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-building"/></svg>
+          Jaiho Reach
+        </a>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Part of the Jaiho Ecosystem</p>
+      <p>Developed by <a href="https://jaihotechserve.onrender.com" target="_blank" rel="noopener noreferrer">Jaiho TechServe</a></p>
+      <p>© Jaiho Digital</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
