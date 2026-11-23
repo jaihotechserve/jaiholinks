@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="Jaiho Edge — Where Intelligence Takes Shape. Robotics, automation, electronics, IoT and precision repairs.">
+
+  <title>Jaiho Edge | Jaiho Links</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 48px 20px;
+      background: #f8f7f3;
+      color: #292824;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 35px;
+      color: #77736b;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .back-link:hover {
+      color: #292824;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .profile-logo {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 27px;
+      background: linear-gradient(145deg, #34332e, #171714);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      box-shadow: 0 10px 25px rgba(35, 33, 27, .13);
+    }
+
+    .profile h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 6vw, 39px);
+      font-weight: 700;
+      letter-spacing: -.8px;
+    }
+
+    .tagline {
+      margin-top: 9px;
+      color: #817c72;
+      font-size: 14px;
+    }
+
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 17px;
+      padding: 10px 16px;
+      border: 1px solid #e5e1d8;
+      border-radius: 30px;
+      background: #fff;
+      color: #5c574e;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .profile-link:hover {
+      border-color: #bcb5a8;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      margin-top: 34px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading {
+      color: #77736b;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .section-count {
+      color: #aaa397;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .link-card {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 15px;
+      border: 1px solid #e9e6df;
+      border-radius: 15px;
+      background: #fff;
+      color: #37352f;
+      font-size: 13px;
+      font-weight: 600;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+    }
+
+    a.link-card:hover {
+      transform: translateY(-3px);
+      border-color: #c9c3b8;
+      box-shadow: 0 9px 22px rgba(40, 36, 27, .06);
+    }
+
+    .icon-wrap {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 11px;
+      background: #f3f1eb;
+      color: #5e5a50;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card-content {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .card-title {
+      line-height: 1.35;
+    }
+
+    .card-subtitle {
+      color: #969086;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .card-arrow {
+      width: 14px;
+      height: 14px;
+      margin-left: auto;
+      flex-shrink: 0;
+      color: #aaa397;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+      margin-top: 30px;
+    }
+
+    .stat {
+      padding: 15px 6px;
+      border: 1px solid #e9e6df;
+      border-radius: 13px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: #37352f;
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: #969086;
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid #e9e6df;
+      text-align: center;
+      color: #969086;
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .footer a {
+      color: #615c53;
+      font-weight: 700;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 15px;
+      }
+
+      .links-grid {
+        gap: 9px;
+      }
+
+      .link-card {
+        min-height: 60px;
+        padding: 11px 9px;
+        gap: 9px;
+        font-size: 11px;
+      }
+
+      .icon-wrap {
+        width: 31px;
+        height: 31px;
+        border-radius: 9px;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .card-subtitle {
+        font-size: 9px;
+      }
+
+      .stats {
+        gap: 6px;
+      }
+
+      .stat strong {
+        font-size: 18px;
+      }
+
+      .stat span {
+        font-size: 8px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Inline SVG Icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
+    </symbol>
+
+    <symbol id="icon-cpu" viewBox="0 0 24 24">
+      <rect x="5" y="5" width="14" height="14" rx="2"/>
+      <path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"/>
+    </symbol>
+
+    <symbol id="icon-robot" viewBox="0 0 24 24">
+      <rect x="4" y="7" width="16" height="13" rx="2"/>
+      <path d="M12 3v4M9 12h.01M15 12h.01M9 16h6M2 11v5m20-5v5"/>
+      <circle cx="12" cy="3" r="1"/>
+    </symbol>
+
+    <symbol id="icon-circuit" viewBox="0 0 24 24">
+      <rect x="8" y="8" width="8" height="8" rx="1"/>
+      <path d="M12 2v6m0 8v6M2 12h6m8 0h6M5 5l4 4m6 6 4 4M19 5l-4 4m-6 6-4 4"/>
+    </symbol>
+
+    <symbol id="icon-wrench" viewBox="0 0 24 24">
+      <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3z"/>
+    </symbol>
+
+    <symbol id="icon-network" viewBox="0 0 24 24">
+      <circle cx="12" cy="5" r="3"/>
+      <circle cx="5" cy="19" r="3"/>
+      <circle cx="19" cy="19" r="3"/>
+      <path d="m10.5 7.5-4 9m7-9 4 9M8 19h8"/>
+    </symbol>
+
+    <symbol id="icon-server" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="8" rx="2"/>
+      <rect x="3" y="13" width="18" height="8" rx="2"/>
+      <path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"/>
+    </symbol>
+
+    <symbol id="icon-image" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <circle cx="8.5" cy="8.5" r="1.5"/>
+      <path d="m21 15-5-5L5 21"/>
+    </symbol>
+
+    <symbol id="icon-briefcase" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="14" rx="2"/>
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/>
+    </symbol>
+
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m22 7-10 7L2 7"/>
+    </symbol>
+
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M14 3h7v7"/>
+      <path d="M10 14 21 3"/>
+      <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/>
+    </symbol>
+
+  </svg>
+
+  <main class="container">
+
+    <a href="../index.html" class="back-link">
+      Make your own Jaiho Links page
+    </a>
+
+    <!-- Profile -->
+    <header class="profile">
+
+      <div class="profile-logo">JE</div>
+
+      <h1>Jaiho Edge</h1>
+
+      <p class="tagline">
+        Where Intelligence Takes Shape.
+      </p>
+
+      <a class="profile-link"
+         href="https://jaihoedge.onrender.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <svg class="icon"><use href="#icon-globe"/></svg>
+        Visit Official Website
+        <svg class="icon"><use href="#icon-external"/></svg>
+      </a>
+
+    </header>
+
+    <!-- Products -->
+    <section class="section">
+
+      <div class="section-header">
+        <h2 class="section-heading">Products & Equipment</h2>
+        <span class="section-count">01 — Products</span>
+      </div>
+
+      <div class="links-grid">
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-image"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Fujifilm Frontier</span>
+            <span class="card-subtitle">Professional Imaging System</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-image"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Fujifilm Frontier LPS</span>
+            <span class="card-subtitle">Large Format Printing System</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-image"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Noritsu Series</span>
+            <span class="card-subtitle">3200 · 3700 · 3800</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-robot"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Industrial Robotic Arm</span>
+            <span class="card-subtitle">Precision Automation</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-circuit"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Custom PCB Solutions</span>
+            <span class="card-subtitle">Embedded Electronics</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-network"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">IoT Edge Controller</span>
+            <span class="card-subtitle">Connected Industrial Systems</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://radiantai.vercel.app/"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-image"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Advanced Image Correction</span>
+            <span class="card-subtitle">Radiant AI Software</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-globe"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Explore All Products</span>
+            <span class="card-subtitle">View the complete catalog</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+
+      <div class="section-header">
+        <h2 class="section-heading">Engineering Services</h2>
+        <span class="section-count">02 — Services</span>
+      </div>
+
+      <div class="links-grid">
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-robot"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Robotics & Automation</span>
+            <span class="card-subtitle">Industrial & Autonomous Systems</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-circuit"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Embedded Electronics</span>
+            <span class="card-subtitle">PCB & Firmware Development</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-wrench"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Precision Repairs</span>
+            <span class="card-subtitle">Industrial Imaging Equipment</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-network"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">IoT Solutions</span>
+            <span class="card-subtitle">Connected Device Ecosystems</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-server"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Industrial Maintenance</span>
+            <span class="card-subtitle">Preventive & Corrective Care</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-briefcase"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Technical Consulting</span>
+            <span class="card-subtitle">Technology & System Integration</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+
+      <div class="section-header">
+        <h2 class="section-heading">Selected Projects</h2>
+        <span class="section-count">03 — Projects</span>
+      </div>
+
+      <div class="links-grid">
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/projects.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-robot"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Factory Automation</span>
+            <span class="card-subtitle">Robotics & Production Systems</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/projects.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-wrench"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Minilab Fleet Restoration</span>
+            <span class="card-subtitle">Fujifilm Frontier Systems</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/projects.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-cpu"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Assembly Line Integration</span>
+            <span class="card-subtitle">Industrial Robotic Arm Deployment</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/projects.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-server"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Smart Factory IoT</span>
+            <span class="card-subtitle">Real-Time Cloud Monitoring</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/projects.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-circuit"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Custom Control Board</span>
+            <span class="card-subtitle">Industrial PCB Design</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/projects.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-briefcase"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Explore All Projects</span>
+            <span class="card-subtitle">Visit the project portfolio</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Website Links -->
+    <section class="section">
+
+      <div class="section-header">
+        <h2 class="section-heading">Explore Jaiho Edge</h2>
+      </div>
+
+      <div class="links-grid">
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/services.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-globe"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">All Services</span>
+            <span class="card-subtitle">Explore our capabilities</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="https://jaihoedge.onrender.com/products.html"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-file"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Product Catalog</span>
+            <span class="card-subtitle">Browse our equipment</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+        <a class="link-card"
+           href="mailto:jaihodigital@gmail.com">
+          <span class="icon-wrap">
+            <svg class="icon"><use href="#icon-mail"/></svg>
+          </span>
+          <span class="card-content">
+            <span class="card-title">Get In Touch</span>
+            <span class="card-subtitle">jaihodigital@gmail.com</span>
+          </span>
+          <svg class="icon card-arrow"><use href="#icon-external"/></svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Website statistics from Jaiho Edge homepage -->
+    <div class="stats">
+      <div class="stat">
+        <strong>150+</strong>
+        <span>Machines Repaired</span>
+      </div>
+
+      <div class="stat">
+        <strong>50+</strong>
+        <span>Happy Clients</span>
+      </div>
+
+      <div class="stat">
+        <strong>10+</strong>
+        <span>Years Experience</span>
+      </div>
+
+      <div class="stat">
+        <strong>24/7</strong>
+        <span>Support Available</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Where Intelligence Takes Shape.</p>
+      <p>Part of the Jaiho Ecosystem</p>
+      <p>A division of
+        <a href="https://jaiho-digital.onrender.com"
+           target="_blank"
+           rel="noopener noreferrer">Jaiho Digital</a>
+      </p>
+      <p>© Jaiho Edge</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
